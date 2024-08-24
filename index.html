@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="startQuizForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Start Quiz</button>
+    </form>
+
+    <div id="button-container" style="display:none;">
+        <h1>Select a Quiz Category</h1>
+        <div id="button-container">
+            <button onclick="startQuiz('science')">Science</button>
+            <button onclick="startQuiz('math')">Math</button>
+            <button onclick="startQuiz('history')">History</button>
+        </div>
+    </div>
+
+    <div id="quiz-content" style="display:none;">
+        <div id="quiz-container">
+            <h2 id="quiz-title"></h2>
+            <div id="question-container"></div>
+            <div id="option-container"></div> 
+            <div id="message-container"></div>
+            <button onclick="submitAnswer()" id="submit-button" disabled>Submit Answer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
